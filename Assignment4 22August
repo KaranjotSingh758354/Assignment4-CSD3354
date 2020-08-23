@@ -1,0 +1,93 @@
+
+using System;
+
+namespace ConsoleApp13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Manager.Run();
+            Manager.ReportOnEmployee("Sami");
+        }
+    }
+
+    class InformationManagement
+    {
+        // # todo: create an array with 100 Employees:
+        static Employee[] EmployeeList = new Employee[10];
+
+        public static void Run()
+        {
+            EmployeeList[0] = new Employee("Karan","Manager");
+            EmployeeList[1] = new Employee("Sidhu", "Analyst");
+            EmployeeList[2] = new Employee("Risav", "Gaurd");
+            EmployeeList[3] = new Employee("Verma", "Supervisor");
+            EmployeeList[4] = new Employee("sami", "General Manager");
+            
+
+            public static void ReportOnEmployee(String mgrname);
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if ((EmployeeList[i].getManager().equals(mgrname){
+                        Console.WriteLine(EmployeeList[i].getEmployeeName() + " is working in department" + EmployeeList[i].getdepartment());
+                    }
+                }
+            }
+
+        }
+        class Employee
+        {
+            private string EmployeeName;
+            private string department;
+            private int EmployeeID = 1111;
+            private string Manager;
+
+            public Employee(string EmpName, string Empdept, string mgr)
+            {
+                this.EmployeeName = EmpName;
+                this.department = Empdept;
+                this.EmployeeID++;
+                this.Manager = mgr;
+            }
+
+            public string getEmployeeName()
+            {
+                return this.EmployeeName;
+            }
+
+            public void setEmployeeName(string EmpName)
+            {
+                this.EmployeeName = EmpName;
+            }
+
+
+            public string getdepartment()
+            {
+                return this.department;
+            }
+
+            public void setdepartment(string Empdept)
+            {
+                this.department = Empdept;
+            }
+
+            public int getEmployeeID()
+            {
+                return this.EmployeeID;
+            }
+
+            public string getManager()
+            {
+                return this.Manager;
+            }
+
+            public void setManager(string mgr)
+            {
+                this.Manager = mgr;
+            }
+
+        }
+    }
+
